@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="chaleur">
+  <rect width="400" height="400" fill="#FFFCF5"/>
+  <circle cx="200" cy="200" r="178" fill="none" stroke="#CB7818" stroke-width="5" stroke-opacity="0.15"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#CB7818" stroke-width="5" stroke-opacity="0.28"/>
+  <g stroke="#CB7818" stroke-width="8" stroke-opacity="0.5">
+    <line x1="200" y1="200" x2="200" y2="90"/>
+    <line x1="200" y1="200" x2="295" y2="145"/>
+    <line x1="200" y1="200" x2="295" y2="255"/>
+    <line x1="200" y1="200" x2="200" y2="310"/>
+    <line x1="200" y1="200" x2="105" y2="255"/>
+    <line x1="200" y1="200" x2="105" y2="145"/>
+  </g>
+  <circle cx="200" cy="200" r="44" fill="#F1A322" stroke="#CB7818" stroke-width="3"/>
+  <circle cx="200" cy="90" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"/>
+  <circle cx="295" cy="145" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"/>
+  <circle cx="295" cy="255" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"/>
+  <circle cx="200" cy="310" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"/>
+  <circle cx="105" cy="255" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"/>
+  <circle cx="105" cy="145" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"/>
+</svg>

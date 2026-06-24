@@ -1,0 +1,53 @@
+/* chaleur website — shared styles (brand v1.2)
+   Design tokens, base rules and motion are reproduced verbatim from the Claude Design bundle.
+   The bundle expressed hover/focus/active as `style-hover` / `style-focus` / `style-active`
+   pseudo-attributes interpreted at runtime; here those interaction states are reproduced as real
+   CSS rules (the small `.is-*` / `.h-*` classes at the foot of this file). Each element keeps its
+   verbatim inline base style; the state rules use `!important` only on the properties that change
+   on interaction, so they reliably override the inline base. */
+
+/* ---- Self-hosted fonts (no third-party CDN) ---- */
+@font-face { font-family:"Inter"; font-style:normal; font-weight:400; font-display:swap; src:url("fonts/Inter-Regular.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-style:normal; font-weight:500; font-display:swap; src:url("fonts/Inter-Medium.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-style:normal; font-weight:600; font-display:swap; src:url("fonts/Inter-SemiBold.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-style:normal; font-weight:700; font-display:swap; src:url("fonts/Inter-Bold.woff2") format("woff2"); }
+
+/* ---- Design tokens ---- */
+:root{
+  --tint-bg:#FFFCF5; --surface:#FFFFFF;
+  --warmth-core:#F1A322; --community-light:#FBC471; --amber-border:#CB7818;
+  --wordmark:#70410A; --richest-dark:#3F2604; --pressed-dark:#2A1903;
+  --fg:#3F2604; --fg-muted:#80633A; --fg-subtle:#B09070;
+  --divider-soft:#F2E2BE; --border-soft:rgba(203,120,24,0.22);
+  --shadow-sm:0 2px 6px rgba(112,65,10,0.08); --shadow-md:0 6px 18px rgba(112,65,10,0.10);
+  --font-sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+/* ---- Base ---- */
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--tint-bg);color:var(--fg);font-family:var(--font-sans);font-weight:400;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+*:focus-visible{outline:2px solid var(--warmth-core);outline-offset:3px;border-radius:3px;}
+main p{text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
+
+/* ---- Animated mark (Home). Finite: the mark settles once and stops. ---- */
+@keyframes ch-settle{from{opacity:0;transform:scale(.45);}to{opacity:1;transform:scale(1);}}
+@keyframes ch-fade{from{opacity:0;}to{opacity:1;}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .ch-settle{animation:none!important;opacity:1!important;transform:none!important;}
+  .ch-halo{animation:none!important;}
+}
+
+/* ---- Interaction states (reproduce the bundle's style-hover/focus/active) ---- */
+.is-skip:focus{top:16px!important;}
+.h-word:hover{color:var(--wordmark)!important;}
+.h-word-ul:hover{color:var(--wordmark)!important;text-decoration:underline!important;}
+.h-ul:hover{text-decoration:underline!important;}
+.h-ghost:hover{border-color:var(--community-light)!important;color:#fff!important;}
+.h-foot:hover{color:#FBC471!important;}
+.h-btn-dark:hover{transform:translateY(-2px)!important;box-shadow:var(--shadow-md)!important;}
+.h-btn-dark:active{transform:translateY(0)!important;background:var(--pressed-dark)!important;}
+.h-btn-amber:hover{background:var(--amber-border)!important;box-shadow:var(--shadow-sm)!important;}
+.h-lift:hover{transform:translateY(-2px)!important;box-shadow:0 8px 22px rgba(0,0,0,0.28)!important;}
+.h-lift:active{transform:translateY(0)!important;}

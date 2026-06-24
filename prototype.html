@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The prototype in action · chaleur</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<a href="#main" class="is-skip" style="position:absolute;left:16px;top:-64px;z-index:200;background:var(--richest-dark);color:#fff;padding:11px 18px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;transition:top .18s ease;">Skip to content</a>
+
+<div style="min-height:100vh;display:flex;flex-direction:column;">
+
+  <header style="position:sticky;top:0;z-index:50;background:rgba(255,252,245,0.94);border-bottom:1px solid var(--divider-soft);">
+    <div style="max-width:1120px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <a href="index.html" aria-label="chaleur home" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;">
+        <svg viewBox="0 0 400 400" width="32" height="32" aria-hidden="true" focusable="false" style="display:block;flex:none;">
+          <circle cx="200" cy="200" r="178" fill="none" stroke="#CB7818" stroke-width="5" stroke-opacity="0.15"></circle><circle cx="200" cy="200" r="150" fill="none" stroke="#CB7818" stroke-width="5" stroke-opacity="0.28"></circle><g stroke="#CB7818" stroke-width="8" stroke-opacity="0.5"><line x1="200" y1="200" x2="200" y2="90"></line><line x1="200" y1="200" x2="295" y2="145"></line><line x1="200" y1="200" x2="295" y2="255"></line><line x1="200" y1="200" x2="200" y2="310"></line><line x1="200" y1="200" x2="105" y2="255"></line><line x1="200" y1="200" x2="105" y2="145"></line></g><circle cx="200" cy="200" r="44" fill="#F1A322" stroke="#CB7818" stroke-width="3"></circle>
+          <circle cx="200" cy="90" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"></circle>
+          <circle cx="295" cy="145" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"></circle>
+          <circle cx="295" cy="255" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"></circle>
+          <circle cx="200" cy="310" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"></circle>
+          <circle cx="105" cy="255" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"></circle>
+          <circle cx="105" cy="145" r="17" fill="#FBC471" stroke="#CB7818" stroke-width="2.5"></circle>
+        </svg>
+        <span style="font-family:var(--font-sans);font-weight:400;font-size:21px;letter-spacing:0.30em;color:var(--wordmark);text-transform:lowercase;line-height:1;padding-left:2px;">chaleur</span>
+      </a>
+      <nav aria-label="Primary" style="display:flex;align-items:center;gap:26px;flex-wrap:wrap;">
+        <a href="index.html" class="h-word" style="text-decoration:none;font-size:15px;font-weight:500;color:var(--fg-muted);">Home</a>
+        <a href="origins.html" class="h-word" style="text-decoration:none;font-size:15px;font-weight:500;color:var(--fg-muted);">Origins</a>
+        <a href="evidence.html" class="h-word" style="text-decoration:none;font-size:15px;font-weight:500;color:var(--fg-muted);">Evidence</a>
+        <a href="prototype.html" aria-current="page" style="text-decoration:underline;text-decoration-color:var(--warmth-core);text-decoration-thickness:2px;text-underline-offset:6px;font-size:15px;font-weight:600;color:var(--wordmark);">Prototype</a>
+        <a href="privacy.html" class="h-word" style="text-decoration:none;font-size:15px;font-weight:500;color:var(--fg-muted);">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <aside aria-label="Partnerships" style="background:rgba(241,163,34,0.09);border-bottom:1px solid var(--divider-soft);">
+    <div style="max-width:1120px;margin:0 auto;padding:13px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+      <p style="margin:0;font-size:15px;color:var(--wordmark);">chaleur is a not-for-profit in development, open to clinical, council and primary-health-network partners.</p>
+      <a href="partners.html" class="h-word" style="display:inline-flex;align-items:center;gap:7px;flex:none;text-decoration:none;font-size:15px;font-weight:600;color:var(--amber-border);">Explore partnerships <span aria-hidden="true">→</span></a>
+    </div>
+  </aside>
+
+  <main id="main" style="flex:1;">
+
+    <section aria-labelledby="proto-h" style="max-width:880px;margin:0 auto;padding:80px 32px 8px;">
+      <h1 id="proto-h" style="margin:0 0 24px;font-weight:500;font-size:clamp(32px,4.2vw,52px);line-height:1.1;letter-spacing:-0.018em;color:var(--wordmark);text-wrap:balance;">The prototype in action</h1>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:var(--fg);max-width:640px;text-align:left;">A short walk through the alert experience, captured from the working prototype.</p>
+      <div role="note" aria-label="Demonstration mode" style="margin-top:28px;display:flex;gap:13px;align-items:flex-start;border:1px solid var(--amber-border);background:rgba(241,163,34,0.10);border-radius:12px;padding:16px 20px;max-width:640px;">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#CB7818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:1px;"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="11" x2="12" y2="16"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:var(--fg);text-align:left;"><strong style="color:var(--wordmark);">Demonstration mode.</strong> Every person and detail shown here is fictional.</p>
+      </div>
+    </section>
+
+    <section aria-label="Prototype screenshots" style="max-width:1000px;margin:0 auto;padding:56px 32px 24px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:64px 48px;">
+
+        <figure style="margin:0;display:flex;flex-direction:column;align-items:center;">
+          <img src="01-splash.webp" width="300" height="596" loading="lazy" decoding="async" alt="The chaleur launch screen: the sun-and-circle mark on a warm cream background with the lowercase &quot;chaleur&quot; wordmark." style="width:100%;max-width:300px;height:auto;display:block;" />
+          <figcaption style="margin-top:22px;font-size:16px;line-height:1.55;color:var(--fg);max-width:360px;text-align:center;">chaleur on launch.</figcaption>
+        </figure>
+
+        <figure style="margin:0;display:flex;flex-direction:column;align-items:center;">
+          <img src="02-alert-feed.webp" width="300" height="596" loading="lazy" decoding="async" alt="The home screen showing Sam flagged &quot;High risk — Extreme heat&quot; (postcode 3000) and Eva &quot;No current alerts&quot; (postcode 2087), with an &quot;Add someone&quot; button." style="width:100%;max-width:300px;height:auto;display:block;" />
+          <figcaption style="margin-top:22px;font-size:16px;line-height:1.55;color:var(--fg);max-width:360px;text-align:center;">The home screen lists everyone a carer looks after and flags who is at risk today.</figcaption>
+        </figure>
+
+        <figure style="margin:0;display:flex;flex-direction:column;align-items:center;">
+          <img src="03-alert-detail.webp" width="300" height="596" loading="lazy" decoding="async" alt="An alert detail for Eva, &quot;High risk — Heat&quot;, postcode 2087, 41°C forecast; &quot;Why this affects Eva&quot; and &quot;What NSW Health recommends&quot; each carry a &quot;Draft — pending clinical review&quot; badge." style="width:100%;max-width:300px;height:auto;display:block;" />
+          <figcaption style="margin-top:22px;font-size:16px;line-height:1.55;color:var(--fg);max-width:360px;text-align:center;">Each alert explains in plain language why conditions are dangerous for that person, with every section marked draft, pending clinical review.</figcaption>
+        </figure>
+
+        <figure style="margin:0;display:flex;flex-direction:column;align-items:center;">
+          <img src="04-coordination.webp" width="300" height="596" loading="lazy" decoding="async" alt="A &quot;What others have done&quot; section listing &quot;Sarah called, 8:44pm&quot; and &quot;You shared advice, 9:14pm&quot;, above the start of a &quot;What you can do&quot; section." style="width:100%;max-width:300px;height:auto;display:block;" />
+          <figcaption style="margin-top:22px;font-size:16px;line-height:1.55;color:var(--fg);max-width:360px;text-align:center;">When more than one person shares the care, the app shows what's already been done, so help isn't duplicated.</figcaption>
+        </figure>
+
+        <figure style="margin:0;display:flex;flex-direction:column;align-items:center;">
+          <img src="06-overview.webp" width="300" height="596" loading="lazy" decoding="async" alt="An overview for Eva — &quot;Clear — no current alerts&quot;, a community circle listing David Chen, and past heat, air-quality and UV alerts with postcodes and dates." style="width:100%;max-width:300px;height:auto;display:block;" />
+          <figcaption style="margin-top:22px;font-size:16px;line-height:1.55;color:var(--fg);max-width:360px;text-align:center;">Each person's overview gathers current status, their community circle and past alerts in one place.</figcaption>
+        </figure>
+
+        <figure style="margin:0;display:flex;flex-direction:column;align-items:center;">
+          <img src="07-community-contact.webp" width="300" height="596" loading="lazy" decoding="async" alt="A community-circle contact screen for David Chen showing a phone number, address and notes, and a history of check-in messages sent during heat, air-quality and UV alerts." style="width:100%;max-width:300px;height:auto;display:block;" />
+          <figcaption style="margin-top:22px;font-size:16px;line-height:1.55;color:var(--fg);max-width:360px;text-align:center;">A community contact's details and a history of past check-ins.</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <section aria-label="Next steps" style="max-width:880px;margin:0 auto;padding:32px 32px 96px;text-align:center;">
+      <p style="margin:0;font-size:18px;line-height:1.6;color:var(--fg-muted);text-align:center;"><a href="partners.html" class="h-word-ul" style="color:var(--amber-border);font-weight:600;text-decoration:none;">chaleur is looking for a clinical partner and pilot funding <span aria-hidden="true">→</span></a></p>
+    </section>
+
+  </main>
+
+  <footer style="background:#3F2604;color:#FFFCF5;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
+    <div style="max-width:1120px;margin:0 auto;padding:56px 32px 28px;">
+      <div style="display:flex;gap:48px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start;margin-bottom:44px;">
+        <div style="max-width:440px;">
+          <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:18px;">
+            <svg viewBox="0 0 400 400" width="30" height="30" aria-hidden="true" focusable="false" style="display:block;flex:none;">
+              <circle cx="200" cy="200" r="178" fill="none" stroke="#FBC471" stroke-width="5" stroke-opacity="0.17"></circle><circle cx="200" cy="200" r="150" fill="none" stroke="#FBC471" stroke-width="5" stroke-opacity="0.3"></circle><g stroke="#FBC471" stroke-width="8" stroke-opacity="0.5"><line x1="200" y1="200" x2="200" y2="90"></line><line x1="200" y1="200" x2="295" y2="145"></line><line x1="200" y1="200" x2="295" y2="255"></line><line x1="200" y1="200" x2="200" y2="310"></line><line x1="200" y1="200" x2="105" y2="255"></line><line x1="200" y1="200" x2="105" y2="145"></line></g><circle cx="200" cy="200" r="44" fill="#F1A322" stroke="#FBC471" stroke-width="3"></circle>
+              <circle cx="200" cy="90" r="17" fill="#FBC471" stroke="#FBC471" stroke-width="2"></circle>
+              <circle cx="295" cy="145" r="17" fill="#FBC471" stroke="#FBC471" stroke-width="2"></circle>
+              <circle cx="295" cy="255" r="17" fill="#FBC471" stroke="#FBC471" stroke-width="2"></circle>
+              <circle cx="200" cy="310" r="17" fill="#FBC471" stroke="#FBC471" stroke-width="2"></circle>
+              <circle cx="105" cy="255" r="17" fill="#FBC471" stroke="#FBC471" stroke-width="2"></circle>
+              <circle cx="105" cy="145" r="17" fill="#FBC471" stroke="#FBC471" stroke-width="2"></circle>
+            </svg>
+            <span style="font-weight:400;font-size:21px;letter-spacing:0.30em;color:#FBC471;text-transform:lowercase;line-height:1;padding-left:2px;">chaleur</span>
+          </div>
+          <p style="margin:0 0 6px;font-size:16px;color:#FBC471;">for the people you already love.</p>
+          <p style="margin:0;font-size:14px;color:#C8A77A;">Based in Sydney, New South Wales, Australia.</p>
+        </div>
+        <div style="display:flex;gap:56px;flex-wrap:wrap;">
+          <nav aria-label="Footer" style="display:flex;flex-direction:column;gap:12px;">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#A6864F;margin-bottom:2px;">Pages</span>
+            <a href="index.html" class="h-foot" style="text-decoration:none;font-size:15px;color:#EDDCBE;">Home</a>
+            <a href="origins.html" class="h-foot" style="text-decoration:none;font-size:15px;color:#EDDCBE;">Origins</a>
+            <a href="evidence.html" class="h-foot" style="text-decoration:none;font-size:15px;color:#EDDCBE;">Evidence</a>
+            <a href="prototype.html" class="h-foot" style="text-decoration:none;font-size:15px;color:#EDDCBE;">Prototype</a>
+            <a href="privacy.html" class="h-foot" style="text-decoration:none;font-size:15px;color:#EDDCBE;">Privacy</a>
+            <a href="partners.html" class="h-foot" style="text-decoration:none;font-size:15px;color:#EDDCBE;">Partners</a>
+          </nav>
+          <nav aria-label="Elsewhere" style="display:flex;flex-direction:column;gap:12px;">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#A6864F;margin-bottom:2px;">Elsewhere</span>
+            <a href="https://www.linkedin.com/company/chaleur-app/" target="_blank" rel="noopener noreferrer" class="h-foot" style="text-decoration:none;font-size:15px;color:#EDDCBE;">chaleur on LinkedIn</a>
+            <a href="https://www.linkedin.com/in/natasharoumanoff/" target="_blank" rel="noopener noreferrer" class="h-foot" style="text-decoration:none;font-size:15px;color:#EDDCBE;">Natasha Roumanoff</a>
+          </nav>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(250,199,117,0.18);padding-top:24px;display:flex;gap:32px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;">
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:#C8A77A;max-width:760px;">chaleur is in development. It is not yet publicly available, is not clinically validated, and carries no clinical or government endorsement. Any guidance shown in the prototype is provisional, is drawn from official public-health sources, and is pending independent clinical sign-off. Nothing here should be relied upon for medical decisions.</p>
+        <p style="margin:0;font-size:13.5px;color:#A6864F;white-space:nowrap;">© 2026 chaleur</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
