@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="chaleur">
-  <rect width="400" height="400" fill="#FFFCF5"/>
+  <rect width="400" height="400" rx="92" ry="92" fill="#FFFCF5"/>
   <circle cx="200" cy="200" r="178" fill="none" stroke="#CB7818" stroke-width="5" stroke-opacity="0.15"/>
   <circle cx="200" cy="200" r="150" fill="none" stroke="#CB7818" stroke-width="5" stroke-opacity="0.28"/>
   <g stroke="#CB7818" stroke-width="8" stroke-opacity="0.5">
