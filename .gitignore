@@ -16,3 +16,6 @@ design-bundle/
 
 # Local backup of the original (black-matte) screenshot webp — not shipped
 .image-originals/
+
+# FUSE editor leftovers — never commit
+.fuse_hidden*
