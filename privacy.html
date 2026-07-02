@@ -49,7 +49,6 @@
     <section aria-labelledby="priv-h" style="max-width:820px;margin:0 auto;padding:80px 32px 32px;">
       <h1 id="priv-h" style="margin:0 0 28px;font-weight:500;font-size:clamp(32px,4.2vw,52px);line-height:1.1;letter-spacing:-0.018em;color:var(--wordmark);text-wrap:balance;">Privacy is the first decision, not a policy added at the end.</h1>
       <p style="margin:0;font-size:18px;line-height:1.7;color:var(--fg);">chaleur is being designed to handle the most sensitive information — who a person cares for, and why they are vulnerable — without that information ever leaving the device it was entered on. The architecture treats a bespoke privacy mistake as fatal to the project, so the boundaries are built in rather than promised.</p>
-      <p style="margin:24px 0 0;font-size:18px;line-height:1.7;color:var(--fg);">Keeping the data on the device answers where it lives, not whether the person agreed to it, and a data-protection reviewer will ask both. A person can set chaleur up for themselves and consent for themselves; where a carer sets it up for someone who can consent, the carer records that they have agreed; and where the person cannot consent or does not know a profile exists, the information is held only on the carer's device and never in a central register, with a full consent and ethics framework for any pilot designed alongside a clinical and ethics partner. The two paths are set out in full on the <a href="origins.html#consent" class="h-word-ul" style="color:var(--amber-border);font-weight:600;text-decoration:none;">Origins page</a>.</p>
     </section>
 
     <section aria-label="Privacy principles" style="max-width:820px;margin:0 auto;padding:24px 32px 32px;">
@@ -57,12 +56,16 @@
         <div style="background:var(--surface);border:1px solid var(--border-soft);border-radius:18px;padding:clamp(26px,3.4vw,34px);box-shadow:var(--shadow-sm);">
           <p style="margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber-border);">Where data lives</p>
           <h2 style="margin:0 0 10px;font-weight:600;font-size:20px;line-height:1.25;color:var(--wordmark);">Sensitive data stays on the device.</h2>
-          <p style="margin:0;font-size:16px;line-height:1.6;color:var(--fg-muted);max-width:620px;">Health details and contacts are held locally and are designed never to sit on a server.</p>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:var(--fg-muted);max-width:620px;">All sensitive health and contact information (who a person cares for, and why they are vulnerable) is designed to stay on the carer's own device under encryption, with nothing held on chaleur's servers. The working prototype is built toward that architecture, and holding it is a foundational decision rather than a feature to be added later.</p>
         </div>
         <div style="background:var(--surface);border:1px solid var(--border-soft);border-radius:18px;padding:clamp(26px,3.4vw,34px);box-shadow:var(--shadow-sm);">
           <p style="margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber-border);">What gets shared</p>
           <h2 style="margin:0 0 10px;font-weight:600;font-size:20px;line-height:1.25;color:var(--wordmark);">Coordination shares almost nothing.</h2>
-          <p style="margin:0;font-size:16px;line-height:1.6;color:var(--fg-muted);max-width:620px;">When co-carers coordinate, only a thin, non-personal signal passes between them, never a person's identity or condition.</p>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:var(--fg-muted);max-width:620px;">When co-carers coordinate, only a thin, encrypted coordination signal (the bare fact that one co-carer has already acted) is designed to pass between them, relayed through a server that cannot read it; never a person's identity or condition. Secure cross-device sync is designed and pending independent review; it is not yet built.</p>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border-soft);border-radius:18px;padding:clamp(26px,3.4vw,34px);box-shadow:var(--shadow-sm);">
+          <h2 style="margin:0 0 10px;font-weight:600;font-size:20px;line-height:1.25;color:var(--wordmark);">The file that never gets created</h2>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:var(--fg-muted);max-width:620px;">Public programmes that protect vulnerable people usually do it by listing them. chaleur is designed to deliver a vulnerability register's protective effect without ever assembling the centralised file of health data such registers require. The policy history behind that choice is set out on <a href="evidence.html#register" class="h-word-ul" style="color:var(--amber-border);font-weight:600;text-decoration:none;">the Evidence page</a>.</p>
         </div>
         <div style="background:var(--surface);border:1px solid var(--border-soft);border-radius:18px;padding:clamp(26px,3.4vw,34px);box-shadow:var(--shadow-sm);">
           <p style="margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--amber-border);">How it is checked</p>
@@ -70,6 +73,11 @@
           <p style="margin:0;font-size:16px;line-height:1.6;color:var(--fg-muted);max-width:620px;">Encryption, key management and data-protection design are slated for external expert review as release gates, not self-certified.</p>
         </div>
       </div>
+    </section>
+
+    <section id="consent" aria-labelledby="consent-h" style="max-width:820px;margin:0 auto;padding:32px 32px 56px;scroll-margin-top:96px;">
+      <h2 id="consent-h" style="margin:0 0 20px;font-weight:500;font-size:clamp(26px,3vw,34px);line-height:1.16;letter-spacing:-0.01em;color:var(--wordmark);text-wrap:balance;">Consent and agency</h2>
+      <p style="margin:0;font-size:18px;line-height:1.7;color:var(--fg);">Where the data lives is not the same question as whether the person agreed. Two paths lead into chaleur. A person can set it up for themselves, holding their own profile and consenting for themselves, which gives a vulnerable person agency rather than a label. More often a carer sets it up for someone they look after, and where that person can consent, the carer is asked to confirm the relationship and to record that the person has agreed to be added. The harder case is real and chaleur does not wave it away: where a person cannot consent, or does not know a profile exists, the design's answer is to hold that information only on the carer's own device, never in a central register, and to treat it as sensitive throughout. Holding the data carefully is not the same as resolving the question of consent and autonomy, and a formal pilot will need a consent and ethics framework that a clinical and ethics partner would help design.</p>
     </section>
 
     <section aria-labelledby="priv-cta" style="border-top:1px solid var(--divider-soft);">
