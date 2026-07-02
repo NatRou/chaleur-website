@@ -46,18 +46,20 @@ main p{text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
    the header grows to 113px / 163px, so the overrides keep the same 31px clearance there;
    !important is required to beat the inline values. Query boundaries sit above the true wrap
    points so rendering variance can only add clearance, never hide the target.
-   #about (origins.html) is the exception: it is a full-bleed brown section whose offset
-   equals the header height exactly, so the cream-to-brown boundary lands at the header's
-   bottom edge. */
+   Targets whose top edge is itself a visible line are the exception; their offset equals
+   the header height exactly so that edge lands at the header's bottom edge rather than
+   floating below it: #about (origins.html, cream-to-brown boundary), #carer-routing
+   (evidence.html, the rule above the question heading) and #register (evidence.html,
+   white-to-cream boundary). */
 main [id]{scroll-margin-top:96px;}
-#about{scroll-margin-top:65px;}
+#about,#carer-routing,#register{scroll-margin-top:65px!important;}
 @media (max-width:659px){
   main [id]{scroll-margin-top:144px!important;}
-  #about{scroll-margin-top:113px!important;}
+  #about,#carer-routing,#register{scroll-margin-top:113px!important;}
 }
 @media (max-width:479px){
   main [id]{scroll-margin-top:194px!important;}
-  #about{scroll-margin-top:163px!important;}
+  #about,#carer-routing,#register{scroll-margin-top:163px!important;}
 }
 
 /* ---- Interaction states (reproduce the bundle's style-hover/focus/active) ---- */
