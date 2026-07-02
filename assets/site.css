@@ -39,15 +39,26 @@ main p{text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
   .ch-halo{animation:none!important;}
 }
 
-/* ---- Anchor offset under the sticky header ----
-   #about on origins.html is a cross-page scroll target. Without an offset the sticky header
-   covers the section heading; the margin places the section's top edge (the cream-to-brown
-   boundary) at the header's bottom edge. Values track the header's measured height as its
-   nav wraps at narrow widths; query boundaries sit above the true wrap points so rendering
-   variance can only leave a sliver of cream visible, never hide the heading. */
+/* ---- Anchor offsets under the sticky header ----
+   The bundle gives in-content anchor targets an inline scroll-margin-top of 96px: the 65px
+   single-row header plus 31px clearance. The base rule below extends that default to any
+   in-content target without an inline value. When the header's nav wraps at narrow widths
+   the header grows to 113px / 163px, so the overrides keep the same 31px clearance there;
+   !important is required to beat the inline values. Query boundaries sit above the true wrap
+   points so rendering variance can only add clearance, never hide the target.
+   #about (origins.html) is the exception: it is a full-bleed brown section whose offset
+   equals the header height exactly, so the cream-to-brown boundary lands at the header's
+   bottom edge. */
+main [id]{scroll-margin-top:96px;}
 #about{scroll-margin-top:65px;}
-@media (max-width:659px){#about{scroll-margin-top:113px;}}
-@media (max-width:479px){#about{scroll-margin-top:163px;}}
+@media (max-width:659px){
+  main [id]{scroll-margin-top:144px!important;}
+  #about{scroll-margin-top:113px!important;}
+}
+@media (max-width:479px){
+  main [id]{scroll-margin-top:194px!important;}
+  #about{scroll-margin-top:163px!important;}
+}
 
 /* ---- Interaction states (reproduce the bundle's style-hover/focus/active) ---- */
 .is-skip:focus{top:16px!important;}
