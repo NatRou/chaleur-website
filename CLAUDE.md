@@ -39,13 +39,19 @@ mark; pause/stop/hide for motion is mandatory.
 ## Privacy (the site itself must practise what the app preaches)
 - **Self-host all fonts.** Do not load Google Fonts or any third-party font CDN — it leaks every
   visitor's IP to a third party, which is indefensible for a privacy-positioned site.
-- **Analytics: GoatCounter only** (decision, July 2026). Natasha wants per-page view counts to see
-  which pages interest visitors — nothing more. GoatCounter was chosen because it is cookieless,
-  stores no personal data, needs no consent banner, and counts every view unsampled. It is the one
-  permitted third-party request: a single script tag per page pointing at Natasha's GoatCounter
-  account. Do not add any other analytics, trackers, cookies, or third-party embeds that phone
-  home, and do not extend GoatCounter usage beyond simple page counting (no events, no session
-  tracking, no campaign parameters).
+- **Analytics: GoatCounter only, required on every page** (decision, July 2026). Natasha wants
+  per-page view counts to see which pages interest visitors — nothing more. GoatCounter was chosen
+  because it is cookieless, stores no personal data, needs no consent banner, and counts every view
+  unsampled. It is the one permitted third-party request. Every page — including any new page, and
+  any page rebuilt from the Claude Design bundle (which predates this decision and does not contain
+  the snippet) — must carry exactly this tag immediately before `</body>`:
+  ```html
+  <script data-goatcounter="https://chaleur.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  ```
+  Do not remove it, do not add any other analytics, trackers, cookies, or third-party embeds that
+  phone home, and do not extend GoatCounter usage beyond simple page counting (no events, no
+  session tracking, no campaign parameters).
 - Contact is a single obfuscated `partnerships@chaleur.app` mailto: assemble it in JS at runtime so
   it is not harvestable as plain text in the page source. No form, no backend, no email capture.
 - Keep the existing LinkedIn company and founder links in the footer. The footer disclaimer carries
